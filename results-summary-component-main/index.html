@@ -3,30 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
     <div class="card">
       <div class="card-container">
         <section class="card-section result">
           <h1 class="light-lavender section-title">Your Result</h1>
-
           <div class="score-container">
             <p><span class="white score">76</span> of 100</p>
           </div>
-
           <div class="result-text">
             <p class="white score-rank">Great</p>
             <p>
@@ -35,42 +29,39 @@
             </p>
           </div>
         </section>
-
         <section class="card-section summary">
           <h2 class="section-title">Summary</h2>
-
           <div class="score-breakdown">
-            <div class="summary-item">
+            <div class="element-padding summary-item light-red">
               <div class="summary-item-name">
                 <img class="summary-item-icon" src="./assets/images/icon-reaction.svg"></img>
-                <h3>Reaction</h3>
+                <p>Reaction</p>
               </div>
-              <p class="summary-item-score"><span>80</span></p>
+              <p class="summary-item-score">80<span class="light-gray"> / 100</span></p>
             </div>
-            <div class="summary-item">
+            <div class="element-padding summary-item orangey">
               <div class="summary-item-name">
                 <img class="summary-item-icon" src="./assets/images/icon-memory.svg"></img>
-                <h3>Memory</h3>
+                <p>Memory</p>
               </div>
-              <p class="summary-item-score"><span>92</span></p>
+              <p class="summary-item-score">92<span class="light-gray"> / 100</span></p>
             </div>
-            <div class="summary-item">
+            <div class="element-padding summary-item green-teal">
               <div class="summary-item-name">
                 <img class="summary-item-icon" src="./assets/images/icon-verbal.svg"></img>
-                <h3>Verbal</h3>
+                <p>Verbal</p>
               </div>
-              <p class="summary-item-score"><span>61</span></p>
+              <p class="summary-item-score">61<span class="light-gray"> / 100</span></p>
             </div>
-            <div class="summary-item">
+            <div class="element-padding summary-item cobalt-blue">
               <div class="summary-item-name">
                 <img class="summary-item-icon" src="./assets/images/icon-visual.svg"></img>
-                <h3>Visual</h3>
+                <p>Visual</p>
               </div>
-              <p class="summary-item-score"><span>72</span></p>
+              <p class="summary-item-score">72<span class="light-gray"> / 100</span></p>
             </div>
           </div>
-
-          <button>Continue</button>
+          <button class="element-padding continue-btn">Continue</button>
         </section>
       </div>
     </div>
