@@ -72,11 +72,9 @@ svg {
 }
 
 body {
-  align-items: center;
   display: flex;
   font-family: var(--font-family-default);
   font-size: var(--fs-400);
-  justify-content: center;
   min-height: 100vh;
 }
 
@@ -84,24 +82,26 @@ body {
   box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-neutral-hsl-700), 0.1);
   border-radius: 2rem;
   height: 440px;
+  margin: auto;
   overflow: hidden;
   width: 650px;
 }
 
 .card-container {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
   height: 100%;
+  justify-content: space-between;
 }
 
 .card-section {
   display: flex;
-  flex: 1;
+  flex: 50%;
   flex-direction: column;
   flex-shrink: 0;
-  padding: 2rem;
   height: 100%;
   justify-content: space-between;
+  padding: 2rem;
 }
 
 .section-title {
@@ -110,11 +110,11 @@ body {
 }
 
 .result {
-  border-radius: 1.5rem;
-  background: var(--gradient-primary);
-  text-align: center;
   align-items: center;
+  background: var(--gradient-primary);
+  border-radius: 1.5rem;
   color: var(--clr-neutral-300);
+  text-align: center;
 }
 
 .white {
@@ -122,19 +122,19 @@ body {
 }
 
 .score-container {
+  background: var(--gradient-to-transparent);
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
-  border-radius: 50%;
-  background: var(--gradient-to-transparent);
+  height: 11rem;
   padding: 2rem;
   width: 11rem;
-  height: 11rem;
 }
 
 .score {
+  display: block;
   font-size: var(--fs-800);
   font-weight: var(--fw-black);
-  display: block;
 }
 
 .result-text {
@@ -154,21 +154,21 @@ body {
 }
 
 .element-padding {
-  padding: 0.9rem;
   line-height: 1;
+  padding: 0.9rem;
 }
 
 .score-breakdown {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 0.9rem;
+  justify-content: space-between;
 }
 
 .summary-item {
+  border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
-  border-radius: 0.5rem;
 }
 
 .summary-item-name {
@@ -213,9 +213,30 @@ body {
 }
 
 .continue-btn {
-  border-radius: 2rem;
   background: var(--clr-neutral-700);
-  color: var(--clr-neutral-100);
   border: none;
+  border-radius: 2rem;
+  color: var(--clr-neutral-100);
   font-weight: var(--fw-regular);
+}
+
+/* Styling for small screen sizes */
+@media screen and (max-width: 550px) {
+  .card {
+    border-radius: 0;
+    height: 100vh;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card-section {
+    height: 50%;
+  }
+
+  .result {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
