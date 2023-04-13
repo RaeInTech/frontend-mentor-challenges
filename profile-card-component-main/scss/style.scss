@@ -23,7 +23,7 @@ body {
 main {
   align-self: center;
   background: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.83rem;
   box-shadow: hsl(229, 23%, 23%, 0.3) 0px 40px 100px;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,6 @@ main {
     border: 4px #ffffff solid;
     border-radius: 50%;
     height: 110px;
-    left: 6.9rem;
     position: absolute;
     top: 4.5rem;
     width: 110px;
@@ -121,5 +120,15 @@ footer {
   .attribution a {
     color: hsl(228, 45%, 44%);
     font-size: 11px;
+  }
+}
+
+// Stylling for mobile view
+@media screen and (max-width: 600px) {
+  body {
+    background-position: right 35vw bottom 50vh, left 35vw top 45vh;
+  }
+  main {
+    width: 320px;
   }
 }
